@@ -1,0 +1,21 @@
+{
+  "name": "lucee-scratchpad",
+  "version": "0.1.0",
+  "description": "GUI Application to quickly test out Lucee code.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dominic Watson",
+  "window": {
+    "toolbar": false,
+    "width": 1400,
+    "height": 900,
+    "title": "Lucee ScratchPad 0.1.0",
+    "icon": "./img/lucee-icon.png"
+  },
+  "license": "",
+  "dependencies": {
+    "java": "^0.4.6"
+  }
+}
