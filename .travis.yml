@@ -1,13 +1,13 @@
 language: java
 jdk:
-    - oraclejdk7
+  - oraclejdk7
 node_js:
   - "0.10"
 before_install:
-	- "npm install -g grunt-cli"
-	- "npm install -g nw-gyp"
+  - "npm install -g grunt-cli"
+  - "npm install -g nw-gyp"
 install:
-	- "npm install"
-	- "cd ./app"
-	- "npm install"
+  - "npm install"
+  - "cd ./app"
+  - "npm install"
 script: grunt
