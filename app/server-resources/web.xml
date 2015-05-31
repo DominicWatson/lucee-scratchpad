@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" metadata-complete="false" version="3.1">
+  <servlet id="Railo">
+    <description>Railo CFML Engine</description>
+    <servlet-name>CFMLServlet</servlet-name>
+    <servlet-class>railo.loader.servlet.CFMLServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+    <init-param>
+      <param-name>configuration</param-name>
+      <param-value>{data-dir}lucee4/web</param-value>
+    </init-param>
+    <init-param>
+      <param-name>railo-server-root</param-name>
+      <param-value>{data-dir}lucee4/server</param-value>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+      <servlet-name>CFMLServlet</servlet-name>
+      <url-pattern>*.cfm</url-pattern>
+      <url-pattern>*.cfc</url-pattern>
+  </servlet-mapping>
+
+  <welcome-file-list>
+      <welcome-file>index.cfm</welcome-file>
+  </welcome-file-list>
+
+
+</web-app>

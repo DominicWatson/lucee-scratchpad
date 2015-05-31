@@ -16,6 +16,7 @@
   },
   "license": "",
   "dependencies": {
-    "java": "^0.4.6"
+    "java": "^0.4.6",
+    "ncp": "~2.0.0"
   }
 }

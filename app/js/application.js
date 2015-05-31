@@ -1,5 +1,5 @@
 
-window.luceeScratch = ( function( $, scratchServer, fs ) {
+window.luceeScratch = ( function( $, scratchServer, fs, nw ) {
     'use strict';
 
     var $iframe;
@@ -15,10 +15,9 @@ window.luceeScratch = ( function( $, scratchServer, fs ) {
 
         var code = $( "#code" ).val();
 
-        fs.writeFile( "/home/dom/.lucee-scratch/application/index.cfm", code, null, function(){
+        fs.writeFile( nw.App.dataPath + "/server/application/index.cfm", code, null, function(){
             $iframe.get(0).contentWindow.location.reload();
         } );
-
     } );
 
-})( jQuery, window.scratchServer, require( "fs" ) );
+})( jQuery, window.scratchServer, require( "fs" ), require( "nw.gui" ) );
