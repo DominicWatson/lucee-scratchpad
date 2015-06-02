@@ -2,7 +2,7 @@
 window.luceeScratch = ( function( $, scratchServer, fs, nw ) {
     'use strict';
 
-    var codeEditor = CodeMirror.fromTextArea( document.getElementById( "code" ) )
+    var codeEditor = CodeMirror.fromTextArea( document.getElementById( "code" ), { lineNumbers: true, theme: "twilight" } )
       , $iframe;
 
     scratchServer.start( function(){
