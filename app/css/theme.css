@@ -4,7 +4,7 @@ html, body {
 }
 
 .code-and-frame-container {
-	position: relative;
+	height : 90%;
 }
 
 .code-and-frame-container iframe {
@@ -17,6 +17,6 @@ html, body {
 	background-color : #fff;
 }
 
-.CodeMirror, .full-height {
+#code, .full-height {
 	height : 100%;
 }

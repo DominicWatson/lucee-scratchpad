@@ -2,8 +2,12 @@
 window.luceeScratch = ( function( $, scratchServer, fs, nw ) {
     'use strict';
 
-    var codeEditor = CodeMirror.fromTextArea( document.getElementById( "code" ), { lineNumbers: true, theme: "twilight" } )
+
+    var codeEditor = ace.edit( "code" )
       , $iframe;
+
+    codeEditor.setTheme( "ace/theme/twilight" );
+    codeEditor.getSession().setMode( "ace/mode/coldfusion" );
 
     scratchServer.start( function(){
         $iframe = $( '<iframe src="http://localhost:4040" frameborder="0" width="100%" height="700" style="background-color:white;"></iframe>' );
