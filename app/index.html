@@ -11,15 +11,16 @@
 		<link rel="stylesheet" href="./js/codemirror/theme/twilight.css" />
 	</head>
 	<body>
-		<div class="row">
-			<div class="col-md-6">
-				<form class="form-horizontal">
+		<div class="row code-and-frame-container full-height">
+			<div class="col-md-6 full-height">
+				<form class="form-horizontal full-height">
 					<textarea id="code" class="form-field"></textarea>
-					<button class="btn btn-success" id="submit">Go</button>
+					<button class="btn btn-success" id="submit">
+						<i class="fa fa-fw fa-play"></i> Run code
+					</button>
 				</form>
 			</div>
-			<div class="col-md-6">
-				<div id="iframe-container"></div>
+			<div class="col-md-6 full-height" id="iframe-container">
 			</div>
 		</div>
 

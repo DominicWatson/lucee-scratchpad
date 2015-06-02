@@ -1,7 +1,22 @@
-body {
+html, body {
 	padding : 20px;
+	height : 100%;
 }
 
-.fake-link {
-	cursor: pointer;
+.code-and-frame-container {
+	position: relative;
+}
+
+.code-and-frame-container iframe {
+	height   : 100%;
+	width    : 100%;
+}
+
+#iframe-container {
+	padding          : 10px;
+	background-color : #fff;
+}
+
+.CodeMirror, .full-height {
+	height : 100%;
 }
