@@ -31,37 +31,37 @@ module.exports = function (grunt) {
 				stderr  : true
 			},
 			zip_linux_32 : {
-				command : 'zip linux32.zip *',
+				command : 'zip -r linux32.zip *',
 				cwd     : './builds/lucee-scratchpad/linux32',
 				stdout  : true,
 				stderr  : true
 			},
 			zip_linux_64 : {
-				command : 'zip linux64.zip *',
+				command : 'zip -r linux64.zip *',
 				cwd     : './builds/lucee-scratchpad/linux64',
 				stdout  : true,
 				stderr  : true
 			},
 			zip_osx_32 : {
-				command : 'zip osx32.zip *',
+				command : 'zip -r osx32.zip *',
 				cwd     : './builds/lucee-scratchpad/osx32',
 				stdout  : true,
 				stderr  : true
 			},
 			zip_osx_64 : {
-				command : 'zip osx64.zip *',
+				command : 'zip -r osx64.zip *',
 				cwd     : './builds/lucee-scratchpad/osx64',
 				stdout  : true,
 				stderr  : true
 			},
 			zip_windows_32 : {
-				command : 'zip win32.zip *',
+				command : 'zip -r win32.zip *',
 				cwd     : './builds/lucee-scratchpad/win32',
 				stdout  : true,
 				stderr  : true
 			},
 			zip_windows_64 : {
-				command : 'zip win64.zip *',
+				command : 'zip -r win64.zip *',
 				cwd     : './builds/lucee-scratchpad/win64',
 				stdout  : true,
 				stderr  : true
