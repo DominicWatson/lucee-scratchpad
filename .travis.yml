@@ -6,19 +6,23 @@ node_js:
 before_install:
 - npm install -g grunt-cli
 - npm install -g nw-gyp
+- apt-get install zip
 install:
 - npm install
 - cd ./app
 - npm install
 - cd ../
-script: grunt
+script:
+- grunt
+- grunt zip
 deploy:
   provider: s3
   access_key_id: AKIAJ4DFYTCTWUNGMADQ
   secret_access_key:
     secure: aGJglpwEEpg45yo+NEtSUqnbIR43Xx1opGsj+IyiTKtjaZX077/mBHDrHUDWGcIuGYKdh31ReMdzk1LxJ2Ds4KBlg2MokS92VGV6yqsQM1uMkxWlSglUpowH0E/xQDRRYnCOEebK1Uhny+T1g+9O2o/m1J8NTII25dQ9cbmC2L/YL6X9Fks2IeJqp9nAPM9kjnKrG+kSAHRc+fd2XRKaJwsPZgJ3P6xJhXFmD95TA3vSTMfesLc56JElVtv/rCT2Qk9fFO1/k4xKd5iqAxqgPoRB4ul5RB1CxxR/QjK5njb/8H4ZKKLmAGyOGvjNNkpqcTEgZPiZWvff6ko58k/ChstK/Uvu2llecGqhL2FQhBQkbA6cENovmNO7cxAZp50SW/D2+QupkQsmkXEVBemOJO83BCpvzdOQXsJ+ARysL17ewdid2iVUKo67No+mlpj77/QqFirmGrnsCkPRmaBHVqnFRIrVTerO1Fnx1ED7g/tie2bSq4dibVHigDPjvHBp6SY6E0R3afqIW/uYgC1oJPzTQWQK/hw4L/CDi56C8rH3IHmWQoiue/6++anst03JVU9BGlNSYmNm/0A5vbcTaH+vLfqB3+0H5C2zIRRut/0hG363yXGroL8FafG+WgqsR9RtrEUXpCVUbLjzYR3j0JWuB3LW7/VRyU3LjwqeXpk=
   bucket: downloads.domwatson.codes
-  local-dir: builds
+  local-dir: builds/lucee-scratchpad/zips
+  upload-dir: lucee-scratchpad
   skip_cleanup: true
   acl: public_read
   on:
