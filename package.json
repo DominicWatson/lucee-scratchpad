@@ -1,14 +1,14 @@
 {
-  "name": "locee",
+  "name": "lucee-scratchpad",
   "version": "0.1.0",
-  "description": "Locee (pronounced \"Low-key\") is a neat GUI application for managing local Lucee web applications.",
+  "description": "Lucee Scratchpad is an application that let's you try out Lucee within a simple GUI",
   "keywords": [
     "lucee",
     "node-webkit"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/dominicwatson/locee"
+    "url": "git://github.com/dominicwatson/lucee-scratchpad"
   },
   "author": {
     "name": "Dominic Watson",
