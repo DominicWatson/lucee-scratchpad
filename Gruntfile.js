@@ -5,7 +5,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks( 'grunt-exec'                );
 	grunt.loadNpmTasks( 'grunt-wget'                );
 	grunt.loadNpmTasks( 'grunt-zip'                 );
-	grunt.loadNpmTasks( 'grunt-zipstream'           );
 	grunt.loadNpmTasks( 'grunt-contrib-clean'       );
 	grunt.loadNpmTasks( 'grunt-contrib-copy'        );
 
