@@ -10,6 +10,7 @@ install:
 - npm install
 - cd ./app
 - npm install
+- cd ../
 script: grunt
 deploy:
   provider: s3
