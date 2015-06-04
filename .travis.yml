@@ -7,7 +7,7 @@ node_js:
 before_install:
 - npm install -g grunt-cli
 - npm install -g nw-gyp
-- apt-get install zip
+- sudo apt-get install zip
 install:
 - npm install
 - cd ./app
