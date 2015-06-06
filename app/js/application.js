@@ -13,6 +13,8 @@ window.luceeScratch = ( function( $, scratchServer, fs, nw ) {
         $iframe = $( '<iframe src="http://localhost:4040" frameborder="0" width="100%" height="700" style="background-color:white;"></iframe>' );
 
         $( '#iframe-container' ).append( $iframe );
+
+        $( 'body' ).removeClass( 'loading' );
     });
 
     $( "#submit" ).click( function( e ){
