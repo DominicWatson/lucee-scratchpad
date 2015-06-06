@@ -35,19 +35,19 @@ window.scratchServer = ( function( $, serverFactory, nw, fs, ncp ) {
 
         var webxmlContent = fs.readFileSync( "./server-resources/web.xml", { encoding : "UTF-8" } );
         fs.writeFileSync( webxml, webxmlContent.replace( /\{data\-dir\}/g, rootFolder ) );
-        ncp( "./server-resources/lucee4-lib/", libDir, function(){
-            ncp( "./scratchpad/", webroot, function(){
-                serverFactory.newServer(
-                    4040
-                  , libDir
-                  , webroot
-                  , webxml
-                  , webInf
-                ).start( callback );
-            } );
-        } );
+        fs.copySync( "./server-resources/lucee4-lib/", libDir );
+        fs.copySync( "./scratchpad/", webroot );
+
+        var server = serverFactory.newServer(
+            4040
+          , libDir
+          , webroot
+          , webxml
+          , webInf
+        );
+        server.start( callback );
     }
 
     return { start : start };
 
-})( jQuery, window.serverFactory, require( "nw.gui" ), require( "fs" ), require( "ncp" ).ncp );
+})( jQuery, window.serverFactory, require( "nw.gui" ), require( "fs-extra" ) );
