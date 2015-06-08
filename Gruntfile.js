@@ -8,7 +8,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks( 'grunt-contrib-clean'       );
 	grunt.loadNpmTasks( 'grunt-contrib-copy'        );
 
-	grunt.registerTask( 'default', [ 'wget:undertowserverjar', 'exec:nwgyp', 'nodewebkit' ] );
+	grunt.registerTask( 'default', [ 'wget:undertowserverjar', 'wget:luceejars', 'exec:nwgyp', 'nodewebkit' ] );
 	grunt.registerTask( 'zip'    , [ 'exec:zip_linux_32' , 'exec:zip_linux_64', 'exec:zip_windows_32' , 'exec:zip_windows_64', 'exec:zip_osx_32' , 'exec:zip_osx_64', 'copy:zips' ] );
 	grunt.registerTask( 'jars'   , [ 'wget:undertowserverjar', 'wget:luceejars', 'unzip', 'clean' ] );
 	grunt.registerTask( 'linux'  , [ 'nodewebkit:linux'                                           ] );
